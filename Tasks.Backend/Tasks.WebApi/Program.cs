@@ -1,19 +1,22 @@
+using DotNetEnv;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using Serilog.Events;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System;
 using System.Reflection;
+using System.Text;
 using Tasks.Application;
 using Tasks.Application.Common.Mappings;
 using Tasks.Persistense;
+using Tasks.Security;
 using Tasks.WebApi;
 using Tasks.WebApi.Middleware;
-using Tasks.Security;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 Log.Logger = new LoggerConfiguration()
              .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
@@ -121,5 +124,11 @@ app.UseSwaggerUI(options =>
 
     options.RoutePrefix = string.Empty;
 });
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ITasksDbContext>() as TasksDbContext;
+    dbContext?.Database.Migrate(); // применяем миграции
+}
 
 app.Run();
