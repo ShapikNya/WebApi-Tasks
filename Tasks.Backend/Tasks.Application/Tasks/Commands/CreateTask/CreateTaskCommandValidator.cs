@@ -15,8 +15,8 @@ namespace Tasks.Application.Tasks.Commands.CreateTask
                 createTaskCommand.Title).NotEmpty().MaximumLength(32);
             RuleFor(createTaskCommand =>
                 createTaskCommand.Description).MaximumLength(250);
-            RuleFor(createTaskCommand =>
-                createTaskCommand.UserId).NotEqual(Guid.Empty);
+            /*RuleFor(createTaskCommand =>
+                createTaskCommand.UserId).NotEqual(Guid.Empty);*/
         }
     }
 }

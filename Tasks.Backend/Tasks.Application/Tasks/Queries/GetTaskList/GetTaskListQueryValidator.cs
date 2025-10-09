@@ -11,7 +11,7 @@ namespace Tasks.Application.Tasks.Queries.GetTaskList
     {
         public GetTaskListQueryValidator()
         {
-            RuleFor(x => x.UserId).NotEqual(Guid.Empty);
+            /*RuleFor(x => x.UserId).NotEqual(Guid.Empty);*/
         }
     }
 }

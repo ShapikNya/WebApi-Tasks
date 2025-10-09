@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Serilog;
 using System.Net;
 using System.Text.Json;
 using Tasks.Application.Common.Exceptions;
@@ -20,12 +21,14 @@ namespace Tasks.WebApi.Middleware
             }
             catch (Exception exception)
             {
+                Log.Error(exception.Message, "Unhandled exception occurred while processing request");
                 await HandleExceptionAsync(context, exception);
             }
         }
 
         private Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
+
             var code = HttpStatusCode.InternalServerError;
             var result = string.Empty;
 

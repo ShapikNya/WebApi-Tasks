@@ -12,7 +12,7 @@ namespace Tasks.Application.Tasks.Queries.GetTaskDetails
         public GetTaskDetailsQueryValidator()
         {
             RuleFor(task => task.Id).NotEqual(Guid.Empty);
-            RuleFor(task => task.UserId).NotEqual(Guid.Empty);
+            /*RuleFor(task => task.UserId).NotEqual(Guid.Empty);*/
         }
     }
 }
