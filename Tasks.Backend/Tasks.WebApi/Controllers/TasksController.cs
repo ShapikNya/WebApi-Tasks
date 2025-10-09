@@ -5,7 +5,7 @@ using Tasks.Application.Tasks.Commands.DeleteTask;
 using Tasks.Application.Tasks.Commands.UpdateNote;
 using Tasks.Application.Tasks.Queries.GetTaskDetails;
 using Tasks.Application.Tasks.Queries.GetTaskList;
-using Tasks.WepApi.Models;
+using Tasks.WebApi.Models.Tasks;
 
 namespace Tasks.WepApi.Controllers
 {

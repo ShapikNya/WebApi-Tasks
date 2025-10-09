@@ -62,6 +62,7 @@ builder.Services.AddSwaggerGen(config =>
     config.IncludeXmlComments(xmlPath);
 });
 
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

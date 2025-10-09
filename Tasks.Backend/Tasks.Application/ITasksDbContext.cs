@@ -10,6 +10,7 @@ namespace Tasks.Application
     public interface ITasksDbContext
     {
         DbSet<Domain.Task> Tasks { get; set; }
+        DbSet<Domain.User> Users { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }

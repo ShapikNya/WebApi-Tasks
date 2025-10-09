@@ -19,7 +19,7 @@ namespace Tasks.Persistense
 
             services.AddDbContext<TasksDbContext>(options =>
             {
-                options.UseNpgsql(connectionString); // <-- меняем на PostgreSQL
+                options.UseNpgsql(connectionString); 
             });
 
             services.AddScoped<ITasksDbContext>(provider =>
