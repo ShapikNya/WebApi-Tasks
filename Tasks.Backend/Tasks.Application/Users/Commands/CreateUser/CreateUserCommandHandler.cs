@@ -12,11 +12,10 @@ namespace Tasks.Application.Users.Commands.CreateUser
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
     {
         private readonly ITasksDbContext _dbContext;
-        private readonly IJwtTokenService _jwtService;
 
-        public CreateUserCommandHandler(ITasksDbContext dbContext, IJwtTokenService jwtService)
+        public CreateUserCommandHandler(ITasksDbContext dbContext)
         {
-            _dbContext = dbContext; _jwtService = jwtService;
+            _dbContext = dbContext;
         }
 
         public async Task<Guid> Handle(CreateUserCommand request,
