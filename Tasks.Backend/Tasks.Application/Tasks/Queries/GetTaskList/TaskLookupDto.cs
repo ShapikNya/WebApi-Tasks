@@ -19,7 +19,7 @@ namespace Tasks.Application.Tasks.Queries.GetTaskList
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Domain.Task, TaskDetailsVm>()
+            profile.CreateMap<Domain.Task, TaskLookupDto>()
                 .ForMember(taskDto => taskDto.Title,
                     opt => opt.MapFrom(task => task.Title))
                 .ForMember(taskDto => taskDto.Description,

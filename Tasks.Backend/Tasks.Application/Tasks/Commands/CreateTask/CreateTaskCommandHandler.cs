@@ -23,8 +23,8 @@ namespace Tasks.Application.Tasks.Commands.CreateTask
                 Id = Guid.NewGuid(),
                 Title = request.Title,
                 Description = request.Description,
-                IsCompleted = request.IsCompleted,
-                CreatedAt = DateTime.Now
+                IsCompleted = false,
+                CreatedAt = DateTime.UtcNow
             };
 
             await _dbContext.Tasks.AddAsync(task, cancellationToken);

@@ -13,7 +13,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Tasks.Application\Tasks.Application.csproj" />
     <ProjectReference Include="..\Tasks.Domain\Tasks.Domain.csproj" />
-    <ProjectReference Include="..\Tasks.WepApi\Tasks.WepApi.csproj" />
   </ItemGroup>
 
 </Project>
