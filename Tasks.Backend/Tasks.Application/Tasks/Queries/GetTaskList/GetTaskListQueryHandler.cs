@@ -23,7 +23,7 @@ namespace Tasks.Application.Tasks.Queries.GetTaskList
            CancellationToken cancellationToken)
         {
             var tasks = await _dbContext.Tasks
-                .Where(t => t.UserId == request.UserId)
+                /*.Where(t => t.UserId == request.UserId)*/
                 .ProjectTo<TaskLookupDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
 

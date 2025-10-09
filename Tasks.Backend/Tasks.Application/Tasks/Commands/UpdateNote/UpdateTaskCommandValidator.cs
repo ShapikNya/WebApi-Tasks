@@ -13,7 +13,7 @@ namespace Tasks.Application.Tasks.Commands.UpdateNote
         public UpdateTaskCommandValidator()
         {
             RuleFor(deleteNoteCommand => deleteNoteCommand.Id).NotEqual(Guid.Empty);
-            RuleFor(deleteNoteCommand => deleteNoteCommand.UserId).NotEqual(Guid.Empty);
+            /*RuleFor(deleteNoteCommand => deleteNoteCommand.UserId).NotEqual(Guid.Empty);*/
             RuleFor(createTaskCommand =>
                 createTaskCommand.Title).NotEmpty().MaximumLength(32);
             RuleFor(createTaskCommand =>

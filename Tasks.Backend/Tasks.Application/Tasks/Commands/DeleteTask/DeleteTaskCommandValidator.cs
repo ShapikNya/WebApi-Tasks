@@ -12,7 +12,7 @@ namespace Tasks.Application.Tasks.Commands.DeleteTask
         public DeleteTaskCommandValidator()
         {
             RuleFor(deleteNoteCommand => deleteNoteCommand.Id).NotEqual(Guid.Empty);
-            RuleFor(deleteNoteCommand => deleteNoteCommand.UserId).NotEqual(Guid.Empty);
+            /*RuleFor(deleteNoteCommand => deleteNoteCommand.UserId).NotEqual(Guid.Empty);*/
         }
     }
 }

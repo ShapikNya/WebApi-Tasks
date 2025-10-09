@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using System.ComponentModel.DataAnnotations;
 using Tasks.Application.Common.Mappings;
 using Tasks.Application.Tasks.Commands.CreateTask;
 
@@ -6,6 +7,7 @@ namespace Tasks.WepApi.Models
 {
     public class CreateTaskDto : IMapWith<CreateTaskCommand>
     {
+        [Required]
         public string Title { get; set; }
         public string? Description { get; set; }
 
