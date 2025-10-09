@@ -15,6 +15,7 @@ namespace Tasks.Persistense.EntityTypeConfigurations
          public void Configure(EntityTypeBuilder<Domain.Task> builder)
          {
             builder.HasKey(x => x.Id);
+            builder.HasIndex(x => x.Id).IsUnique();
             builder.Property(x => x.Title).HasMaxLength(32).IsRequired();
             builder.Property(x => x.Description).HasMaxLength(150);
             builder.Property(x => x.CreatedAt).IsRequired();
