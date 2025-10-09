@@ -12,12 +12,12 @@ namespace Tasks.Application.Tasks.Commands.UpdateNote
     {
         public UpdateTaskCommandValidator()
         {
-            RuleFor(deleteNoteCommand => deleteNoteCommand.Id).NotEqual(Guid.Empty);
+            RuleFor(updateTaskComand => updateTaskComand.Id).NotEqual(Guid.Empty);
             /*RuleFor(deleteNoteCommand => deleteNoteCommand.UserId).NotEqual(Guid.Empty);*/
-            RuleFor(createTaskCommand =>
-                createTaskCommand.Title).NotEmpty().MaximumLength(32);
-            RuleFor(createTaskCommand =>
-                createTaskCommand.Description).MaximumLength(250);
+            RuleFor(updateTaskComand =>
+                updateTaskComand.Title).NotEmpty().MaximumLength(32);
+            RuleFor(updateTaskComand =>
+                updateTaskComand.Description).MaximumLength(250);
         }
     }
 }

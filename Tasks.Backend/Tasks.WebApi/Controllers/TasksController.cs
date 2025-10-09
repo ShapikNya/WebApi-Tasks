@@ -90,6 +90,7 @@ namespace Tasks.WepApi.Controllers
         /// Sample request:
         /// PUT /task
         /// {
+        ///     "id": "D34D349E-43B8-429E-BCA4-793C932FD580",
         ///     "title": "Cleaning room",
         ///     "description": "",
         ///     "isCompleted": true

@@ -1,9 +1,17 @@
 using Microsoft.Extensions.Configuration;
+using Serilog;
+using Serilog.Events;
 using System.Reflection;
 using Tasks.Application;
 using Tasks.Application.Common.Mappings;
 using Tasks.Persistense;
 using Tasks.WebApi.Middleware;
+
+Log.Logger = new LoggerConfiguration()
+             .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+             .WriteTo.File("TasksWebAppLog-.txt", rollingInterval:
+                 RollingInterval.Month)
+             .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,7 +54,6 @@ app.UseSwaggerUI(config =>
     config.RoutePrefix = string.Empty;
     config.SwaggerEndpoint("/swagger/v1/swagger.json", "Notes API");
 });
-
 app.UseCustomExceptionHandler();
 app.UseHttpsRedirection();
 app.UseRouting();
