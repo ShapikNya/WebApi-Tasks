@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tasks.Domain\Tasks.Domain.csproj" />
+    <ProjectReference Include="..\Tasks.WepApi\Tasks.WepApi.csproj" />
+  </ItemGroup>
+
 </Project>
