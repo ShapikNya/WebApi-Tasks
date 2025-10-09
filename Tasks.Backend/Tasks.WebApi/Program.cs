@@ -3,6 +3,7 @@ using System.Reflection;
 using Tasks.Application;
 using Tasks.Application.Common.Mappings;
 using Tasks.Persistense;
+using Tasks.WebApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,10 +33,10 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
+app.UseCustomExceptionHandler();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("AllowAll");
-
 app.MapControllers();
 
 app.Run();
