@@ -1,10 +1,15 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Serilog;
 using Serilog.Events;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 using Tasks.Application;
 using Tasks.Application.Common.Mappings;
 using Tasks.Persistense;
+using Tasks.WebApi;
 using Tasks.WebApi.Middleware;
 
 Log.Logger = new LoggerConfiguration()
@@ -14,6 +19,8 @@ Log.Logger = new LoggerConfiguration()
              .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 
 builder.Services.AddAutoMapper(config =>
 {
@@ -34,6 +41,20 @@ builder.Services.AddCors(options =>
             });
     });
 
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1, 0); 
+    options.AssumeDefaultVersionWhenUnspecified = true; 
+    options.ReportApiVersions = true;
+});
+
+
+builder.Services.AddVersionedApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV"; // => v1, v2
+    options.SubstituteApiVersionInUrl = true;
+});  
+
 builder.Services.AddSwaggerGen(config =>
 {
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -48,16 +69,26 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-app.UseSwagger();
-app.UseSwaggerUI(config =>
-{
-    config.RoutePrefix = string.Empty;
-    config.SwaggerEndpoint("/swagger/v1/swagger.json", "Notes API");
-});
 app.UseCustomExceptionHandler();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("AllowAll");
+app.UseApiVersioning();
 app.MapControllers();
+app.UseSwagger();
+app.UseSwaggerUI(options =>
+{
+    var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+
+    foreach (var description in provider.ApiVersionDescriptions)
+    {
+        options.SwaggerEndpoint(
+            $"/swagger/{description.GroupName}/swagger.json",
+            $"Tasks API {description.ApiVersion}"
+        );
+    }
+
+    options.RoutePrefix = string.Empty;
+});
 
 app.Run();

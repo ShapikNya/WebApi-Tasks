@@ -9,8 +9,10 @@ using Tasks.WepApi.Models;
 
 namespace Tasks.WepApi.Controllers
 {
+    [ApiVersion("1.0")]
+    [ApiVersion("2.0")]
     [Produces("application/json")]
-    [Route("api/tasks")]
+    [Route("api/v{version:apiVersion}/tasks")]
     public class TasksController : BaseController
     {
         private readonly IMapper _mapper;
