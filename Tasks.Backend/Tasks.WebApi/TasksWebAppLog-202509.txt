@@ -1,0 +1,144 @@
+2025-09-23 01:46:47.006 +03:00 [INF] Handling GetTaskListQuery with data: {"UserId":"00000000-0000-0000-0000-000000000000","$type":"GetTaskListQuery"}
+2025-09-23 01:46:47.801 +03:00 [INF] Handled GetTaskListQuery with response: {"Tasks":[{"Id":"39f22bd5-63a8-4f7f-9818-256627175e57","Title":"someTask2","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:20.6976710Z","$type":"TaskLookupDto"},{"Id":"f78dbcf4-1fe3-48be-9e7e-58bdbce43c28","Title":"someTask3","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:22.9553660Z","$type":"TaskLookupDto"},{"Id":"d062a6ac-78c0-4cf0-83cb-b0b12d6b6b0e","Title":"fdafadsf","Description":"string","IsCompleted":false,"CreatedAt":"2025-09-22T21:25:00.4755190Z","$type":"TaskLookupDto"},{"Id":"1924778c-3c74-4cf8-85a6-e06e6c0aef80","Title":"someTask33213fadsfasdf","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T22:31:26.2635090Z","$type":"TaskLookupDto"}],"$type":"TaskListVm"}
+2025-09-23 01:49:27.260 +03:00 [INF] Handling GetTaskListQuery with data: {"UserId":"00000000-0000-0000-0000-000000000000","$type":"GetTaskListQuery"}
+2025-09-23 01:49:28.125 +03:00 [INF] Handled GetTaskListQuery with response: {"Tasks":[{"Id":"39f22bd5-63a8-4f7f-9818-256627175e57","Title":"someTask2","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:20.6976710Z","$type":"TaskLookupDto"},{"Id":"f78dbcf4-1fe3-48be-9e7e-58bdbce43c28","Title":"someTask3","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:22.9553660Z","$type":"TaskLookupDto"},{"Id":"d062a6ac-78c0-4cf0-83cb-b0b12d6b6b0e","Title":"fdafadsf","Description":"string","IsCompleted":false,"CreatedAt":"2025-09-22T21:25:00.4755190Z","$type":"TaskLookupDto"},{"Id":"1924778c-3c74-4cf8-85a6-e06e6c0aef80","Title":"someTask33213fadsfasdf","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T22:31:26.2635090Z","$type":"TaskLookupDto"}],"$type":"TaskListVm"}
+2025-09-23 01:50:43.603 +03:00 [INF] Handling UpdateTaskCommand with data: {"UserId":"00000000-0000-0000-0000-000000000000","Id":"1924778c-3c74-4cf8-85a6-e06e6c0aef80","Title":"string","Description":"string","IsCompleted":true,"$type":"UpdateTaskCommand"}
+2025-09-23 01:50:43.785 +03:00 [INF] Handled UpdateTaskCommand with response: {"$type":"Unit"}
+2025-09-23 01:50:50.187 +03:00 [INF] Handling GetTaskListQuery with data: {"UserId":"00000000-0000-0000-0000-000000000000","$type":"GetTaskListQuery"}
+2025-09-23 01:50:50.229 +03:00 [INF] Handled GetTaskListQuery with response: {"Tasks":[{"Id":"39f22bd5-63a8-4f7f-9818-256627175e57","Title":"someTask2","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:20.6976710Z","$type":"TaskLookupDto"},{"Id":"f78dbcf4-1fe3-48be-9e7e-58bdbce43c28","Title":"someTask3","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:22.9553660Z","$type":"TaskLookupDto"},{"Id":"d062a6ac-78c0-4cf0-83cb-b0b12d6b6b0e","Title":"fdafadsf","Description":"string","IsCompleted":false,"CreatedAt":"2025-09-22T21:25:00.4755190Z","$type":"TaskLookupDto"},{"Id":"1924778c-3c74-4cf8-85a6-e06e6c0aef80","Title":"string","Description":"string","IsCompleted":true,"CreatedAt":"2025-09-22T22:31:26.2635090Z","$type":"TaskLookupDto"}],"$type":"TaskListVm"}
+2025-09-23 01:52:03.333 +03:00 [INF] Handling UpdateTaskCommand with data: {"UserId":"00000000-0000-0000-0000-000000000000","Id":"1924778c-3c74-4cf8-81a6-e06e6c0aef80","Title":"string","Description":"string","IsCompleted":true,"$type":"UpdateTaskCommand"}
+2025-09-23 01:52:03.337 +03:00 [ERR] Entity "Task" (1924778c-3c74-4cf8-81a6-e06e6c0aef80) not found.
+2025-09-24 14:52:28.261 +03:00 [INF] Handling GetTaskListQuery with data: {"UserId":"00000000-0000-0000-0000-000000000000","$type":"GetTaskListQuery"}
+2025-09-24 14:52:30.820 +03:00 [INF] Handled GetTaskListQuery with response: {"Tasks":[{"Id":"39f22bd5-63a8-4f7f-9818-256627175e57","Title":"someTask2","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:20.6976710Z","$type":"TaskLookupDto"},{"Id":"f78dbcf4-1fe3-48be-9e7e-58bdbce43c28","Title":"someTask3","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:22.9553660Z","$type":"TaskLookupDto"},{"Id":"d062a6ac-78c0-4cf0-83cb-b0b12d6b6b0e","Title":"fdafadsf","Description":"string","IsCompleted":false,"CreatedAt":"2025-09-22T21:25:00.4755190Z","$type":"TaskLookupDto"},{"Id":"1924778c-3c74-4cf8-85a6-e06e6c0aef80","Title":"string","Description":"string","IsCompleted":true,"CreatedAt":"2025-09-22T22:31:26.2635090Z","$type":"TaskLookupDto"}],"$type":"TaskListVm"}
+2025-09-24 14:57:45.051 +03:00 [INF] Handling GetTaskListQuery with data: {"UserId":"00000000-0000-0000-0000-000000000000","$type":"GetTaskListQuery"}
+2025-09-24 14:57:45.832 +03:00 [INF] Handled GetTaskListQuery with response: {"Tasks":[{"Id":"39f22bd5-63a8-4f7f-9818-256627175e57","Title":"someTask2","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:20.6976710Z","$type":"TaskLookupDto"},{"Id":"f78dbcf4-1fe3-48be-9e7e-58bdbce43c28","Title":"someTask3","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:22.9553660Z","$type":"TaskLookupDto"},{"Id":"d062a6ac-78c0-4cf0-83cb-b0b12d6b6b0e","Title":"fdafadsf","Description":"string","IsCompleted":false,"CreatedAt":"2025-09-22T21:25:00.4755190Z","$type":"TaskLookupDto"},{"Id":"1924778c-3c74-4cf8-85a6-e06e6c0aef80","Title":"string","Description":"string","IsCompleted":true,"CreatedAt":"2025-09-22T22:31:26.2635090Z","$type":"TaskLookupDto"}],"$type":"TaskListVm"}
+2025-09-24 14:57:48.349 +03:00 [INF] Handling GetTaskListQuery with data: {"UserId":"00000000-0000-0000-0000-000000000000","$type":"GetTaskListQuery"}
+2025-09-24 14:57:48.366 +03:00 [INF] Handled GetTaskListQuery with response: {"Tasks":[{"Id":"39f22bd5-63a8-4f7f-9818-256627175e57","Title":"someTask2","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:20.6976710Z","$type":"TaskLookupDto"},{"Id":"f78dbcf4-1fe3-48be-9e7e-58bdbce43c28","Title":"someTask3","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:22.9553660Z","$type":"TaskLookupDto"},{"Id":"d062a6ac-78c0-4cf0-83cb-b0b12d6b6b0e","Title":"fdafadsf","Description":"string","IsCompleted":false,"CreatedAt":"2025-09-22T21:25:00.4755190Z","$type":"TaskLookupDto"},{"Id":"1924778c-3c74-4cf8-85a6-e06e6c0aef80","Title":"string","Description":"string","IsCompleted":true,"CreatedAt":"2025-09-22T22:31:26.2635090Z","$type":"TaskLookupDto"}],"$type":"TaskListVm"}
+2025-09-24 14:57:55.991 +03:00 [INF] Handling GetTaskListQuery with data: {"UserId":"00000000-0000-0000-0000-000000000000","$type":"GetTaskListQuery"}
+2025-09-24 14:57:56.042 +03:00 [INF] Handled GetTaskListQuery with response: {"Tasks":[{"Id":"39f22bd5-63a8-4f7f-9818-256627175e57","Title":"someTask2","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:20.6976710Z","$type":"TaskLookupDto"},{"Id":"f78dbcf4-1fe3-48be-9e7e-58bdbce43c28","Title":"someTask3","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:22.9553660Z","$type":"TaskLookupDto"},{"Id":"d062a6ac-78c0-4cf0-83cb-b0b12d6b6b0e","Title":"fdafadsf","Description":"string","IsCompleted":false,"CreatedAt":"2025-09-22T21:25:00.4755190Z","$type":"TaskLookupDto"},{"Id":"1924778c-3c74-4cf8-85a6-e06e6c0aef80","Title":"string","Description":"string","IsCompleted":true,"CreatedAt":"2025-09-22T22:31:26.2635090Z","$type":"TaskLookupDto"}],"$type":"TaskListVm"}
+2025-09-25 00:25:54.614 +03:00 [ERR] Validation failed: 
+ -- Email: Email должен содержать символ '@' Severity: Error
+ -- Password: Пароль должен содержать минимум 8 символов Severity: Error
+2025-09-25 00:26:18.275 +03:00 [ERR] Validation failed: 
+ -- Email: Пароль должен содержать только латинские буквы и допустимые символы Severity: Error
+2025-09-25 00:30:29.028 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"first_user@test.com","Password":"qqWERty332","$type":"CreateUserCommand"}
+2025-09-25 00:30:29.845 +03:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-25 00:31:14.383 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"first_user@test.com","Password":"qqWERty332","$type":"CreateUserCommand"}
+2025-09-25 00:31:37.639 +03:00 [ERR] Validation failed: 
+ -- Password: Пароль должен содержать минимум 8 символов Severity: Error
+2025-09-25 00:31:41.095 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"string@","Password":"strisssng","$type":"CreateUserCommand"}
+2025-09-25 00:31:51.522 +03:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-25 00:32:48.816 +03:00 [INF] Handling GetTaskListQuery with data: {"UserId":"00000000-0000-0000-0000-000000000000","$type":"GetTaskListQuery"}
+2025-09-25 00:32:49.628 +03:00 [INF] Handled GetTaskListQuery with response: {"Tasks":[{"Id":"39f22bd5-63a8-4f7f-9818-256627175e57","Title":"someTask2","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:20.6976710Z","$type":"TaskLookupDto"},{"Id":"f78dbcf4-1fe3-48be-9e7e-58bdbce43c28","Title":"someTask3","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:22.9553660Z","$type":"TaskLookupDto"},{"Id":"d062a6ac-78c0-4cf0-83cb-b0b12d6b6b0e","Title":"fdafadsf","Description":"string","IsCompleted":false,"CreatedAt":"2025-09-22T21:25:00.4755190Z","$type":"TaskLookupDto"},{"Id":"1924778c-3c74-4cf8-85a6-e06e6c0aef80","Title":"string","Description":"string","IsCompleted":true,"CreatedAt":"2025-09-22T22:31:26.2635090Z","$type":"TaskLookupDto"}],"$type":"TaskListVm"}
+2025-09-25 00:33:30.926 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"string@","Password":"strin414g","$type":"CreateUserCommand"}
+2025-09-25 00:33:31.096 +03:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details.
+2025-09-25 00:47:13.214 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"first_user@test.com","Password":"QwwerTy332","$type":"CreateUserCommand"}
+2025-09-25 00:47:13.940 +03:00 [INF] Handled CreateUserCommand with response: "f204ab50-7f1b-4ef8-a38c-fa879842d81b"
+2025-09-25 00:47:58.107 +03:00 [ERR] Entity "user" (3fa85f64-5717-4562-b3fc-2c963f66afa2) not found.
+2025-09-25 00:48:05.698 +03:00 [ERR] Entity "user" (3fa85f64-5717-4562-b3fc-2c963f66afa6) not found.
+2025-09-25 00:48:07.616 +03:00 [ERR] Entity "user" (3fa85f64-5717-4562-b3fc-2c963f66afa6) not found.
+2025-09-25 00:48:08.121 +03:00 [ERR] Entity "user" (3fa85f64-5717-4562-b3fc-2c963f66afa6) not found.
+2025-09-25 00:48:08.323 +03:00 [ERR] Entity "user" (3fa85f64-5717-4562-b3fc-2c963f66afa6) not found.
+2025-09-25 00:48:08.521 +03:00 [ERR] Entity "user" (3fa85f64-5717-4562-b3fc-2c963f66afa6) not found.
+2025-09-25 00:48:09.180 +03:00 [ERR] Entity "user" (3fa85f64-5717-4562-b3fc-2c963f66afa6) not found.
+2025-09-25 00:48:23.579 +03:00 [ERR] Entity "user" (f204ab50-7f1b-4ef8-a38c-fa879842d81b) not found.
+2025-09-25 00:48:23.781 +03:00 [ERR] Entity "user" (f204ab50-7f1b-4ef8-a38c-fa879842d81b) not found.
+2025-09-25 00:48:23.978 +03:00 [ERR] Entity "user" (f204ab50-7f1b-4ef8-a38c-fa879842d81b) not found.
+2025-09-25 00:48:24.167 +03:00 [ERR] Entity "user" (f204ab50-7f1b-4ef8-a38c-fa879842d81b) not found.
+2025-09-25 00:48:24.869 +03:00 [ERR] Entity "user" (f204ab50-7f1b-4ef8-a38c-fa879842d81b) not found.
+2025-09-25 00:48:37.483 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"first_user@test.com","Password":"QwwerTy332","$type":"CreateUserCommand"}
+2025-09-25 00:48:37.496 +03:00 [INF] Handled CreateUserCommand with response: "e330a7c0-66c2-4159-bb66-96d456ac3ab2"
+2025-09-25 00:48:50.951 +03:00 [ERR] Entity "user" (3fa85f64-5717-4562-b3fc-2c963f66afa6) not found.
+2025-09-25 00:58:51.463 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"first_user@test.com","Password":"QwwerTy332","$type":"CreateUserCommand"}
+2025-09-25 00:58:51.550 +03:00 [INF] Handled CreateUserCommand with response: "af916552-d913-40c7-a2fe-13fb16cdb150"
+2025-09-25 00:59:04.260 +03:00 [ERR] Entity "user" (af916552-d913-40c7-a2fe-13fb16cdb150) not found.
+2025-09-25 01:01:04.261 +03:00 [ERR] Validation failed: 
+ -- Email: Email должен содержать символ '@' Severity: Error
+ -- Password: Пароль должен содержать минимум 8 символов Severity: Error
+2025-09-25 01:01:24.280 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"first_user@test.com","Password":"PassWorD223","$type":"CreateUserCommand"}
+2025-09-25 01:01:24.961 +03:00 [INF] Handled CreateUserCommand with response: "a4e0b390-81f5-4e7e-9e02-c56200cef788"
+2025-09-25 01:01:43.458 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"Second_user@test.com","Password":"QQwerty32","$type":"CreateUserCommand"}
+2025-09-25 01:01:43.508 +03:00 [INF] Handled CreateUserCommand with response: "08752932-def6-4516-9909-999a0eafad51"
+2025-09-25 01:50:34.144 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:35.268 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:36.912 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:36.967 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:37.389 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:37.448 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:38.113 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:38.165 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:38.585 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:38.643 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:39.014 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:39.070 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:39.407 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:39.582 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:39.763 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:39.820 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:40.125 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:40.423 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:50:45.150 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:51:03.002 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:51:03.262 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:51:03.674 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:51:03.935 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:51:04.155 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:51:04.208 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:51:04.312 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:51:04.471 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:52:09.644 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:52:10.660 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:52:15.599 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:52:15.813 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:55:30.428 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:55:31.321 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:57:56.991 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:57:57.296 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:59:20.780 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 01:59:21.129 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 02:00:15.169 +03:00 [INF] User profile is available. Using 'C:\Users\Shapi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-25 02:00:15.305 +03:00 [INF] Now listening on: https://localhost:7138
+2025-09-25 02:00:15.306 +03:00 [INF] Now listening on: http://localhost:5039
+2025-09-25 02:00:15.373 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-25 02:00:15.373 +03:00 [INF] Hosting environment: Development
+2025-09-25 02:00:15.373 +03:00 [INF] Content root path: C:\Users\Shapi\Desktop\TaskAPI\Tasks.Backend\Tasks.WebApi
+2025-09-25 02:00:15.970 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7138/index.html - null null
+2025-09-25 02:00:16.053 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 02:00:16.064 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7138/index.html - 500 null application/json 95.6988ms
+2025-09-25 02:00:16.349 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7138/favicon.ico - null null
+2025-09-25 02:00:16.351 +03:00 [ERR] Value cannot be null. (Parameter 's')
+2025-09-25 02:00:16.351 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7138/favicon.ico - 500 null application/json 1.7991ms
+2025-09-25 02:03:00.245 +03:00 [ERR] Validation failed: 
+ -- Email: Email должен содержать символ '@' Severity: Error
+ -- Password: Пароль должен содержать минимум 8 символов Severity: Error
+2025-09-25 02:03:10.151 +03:00 [ERR] Validation failed: 
+ -- Email: Email должен содержать символ '@' Severity: Error
+ -- Password: Пароль должен содержать минимум 8 символов Severity: Error
+2025-09-25 02:04:13.534 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"test@test.com","Password":"teststsststt","$type":"CreateUserCommand"}
+2025-09-25 02:04:16.025 +03:00 [ERR] IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '168' bits. (Parameter 'keyBytes')
+2025-09-25 02:05:25.176 +03:00 [ERR] Validation failed: 
+ -- Password: Пароль должен содержать максимум 16 символов Severity: Error
+2025-09-25 02:05:32.725 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"test@test.com","Password":"etststs3","$type":"CreateUserCommand"}
+2025-09-25 02:05:33.413 +03:00 [INF] Handled CreateUserCommand with response: "1fb2539d-db00-47ff-ba3d-6dd0ef1a84a7"
+2025-09-25 02:29:54.598 +03:00 [ERR] Validation failed: 
+ -- Password: Пароль должен содержать минимум 8 символов Severity: Error
+2025-09-25 02:29:57.911 +03:00 [INF] Handling CreateUserCommand with data: {"Email":"newUser@mai.ru","Password":"Monika11","$type":"CreateUserCommand"}
+2025-09-25 02:29:59.913 +03:00 [INF] Handled CreateUserCommand with response: "10d85034-3702-44a5-88d6-08d020697a31"
+2025-09-25 02:30:11.227 +03:00 [INF] Handling LoginUserCommand with data: {"Email":"string","Password":"string","$type":"LoginUserCommand"}
+2025-09-25 02:30:11.499 +03:00 [ERR] Entity "user" (string) not found.
+2025-09-25 02:30:28.625 +03:00 [INF] Handling LoginUserCommand with data: {"Email":"newUser@mai.ru","Password":"string","$type":"LoginUserCommand"}
+2025-09-25 02:30:28.767 +03:00 [ERR] Incorrect (string) for "user"
+2025-09-25 02:30:43.466 +03:00 [INF] Handling LoginUserCommand with data: {"Email":"newUser@mai.ru","Password":"Monika11","$type":"LoginUserCommand"}
+2025-09-25 02:30:43.621 +03:00 [INF] Handled LoginUserCommand with response: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMGQ4NTAzNC0zNzAyLTQ0YTUtODhkNi0wOGQwMjA2OTdhMzEiLCJlbWFpbCI6Im5ld1VzZXJAbWFpLnJ1IiwiZXhwIjoxNzU4NzYwMjQzLCJpc3MiOiJZb3VySXNzdWVyIiwiYXVkIjoiWW91ckF1ZGllbmNlIn0.D8yefOa8KBBGtRgHsLb6teisdxHPLg26zuBGu9Ixlak
+2025-09-25 02:33:09.055 +03:00 [INF] Handling GetTaskListQuery with data: {"UserId":"00000000-0000-0000-0000-000000000000","$type":"GetTaskListQuery"}
+2025-09-25 02:33:09.866 +03:00 [INF] Handled GetTaskListQuery with response: {"Tasks":[{"Id":"39f22bd5-63a8-4f7f-9818-256627175e57","Title":"someTask2","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:20.6976710Z","$type":"TaskLookupDto"},{"Id":"f78dbcf4-1fe3-48be-9e7e-58bdbce43c28","Title":"someTask3","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:22.9553660Z","$type":"TaskLookupDto"},{"Id":"d062a6ac-78c0-4cf0-83cb-b0b12d6b6b0e","Title":"fdafadsf","Description":"string","IsCompleted":false,"CreatedAt":"2025-09-22T21:25:00.4755190Z","$type":"TaskLookupDto"},{"Id":"1924778c-3c74-4cf8-85a6-e06e6c0aef80","Title":"string","Description":"string","IsCompleted":true,"CreatedAt":"2025-09-22T22:31:26.2635090Z","$type":"TaskLookupDto"}],"$type":"TaskListVm"}
+2025-09-25 02:33:22.399 +03:00 [ERR] Endpoint Tasks.WepApi.Controllers.TasksController.Get (Tasks.WebApi) contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() in the application startup code. If there are calls to app.UseRouting() and app.UseEndpoints(...), the call to app.UseAuthorization() must go between them.
+2025-09-25 02:35:56.630 +03:00 [INF] Handling GetTaskListQuery with data: {"UserId":"00000000-0000-0000-0000-000000000000","$type":"GetTaskListQuery"}
+2025-09-25 02:35:57.555 +03:00 [INF] Handled GetTaskListQuery with response: {"Tasks":[{"Id":"39f22bd5-63a8-4f7f-9818-256627175e57","Title":"someTask2","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:20.6976710Z","$type":"TaskLookupDto"},{"Id":"f78dbcf4-1fe3-48be-9e7e-58bdbce43c28","Title":"someTask3","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:22.9553660Z","$type":"TaskLookupDto"},{"Id":"d062a6ac-78c0-4cf0-83cb-b0b12d6b6b0e","Title":"fdafadsf","Description":"string","IsCompleted":false,"CreatedAt":"2025-09-22T21:25:00.4755190Z","$type":"TaskLookupDto"},{"Id":"1924778c-3c74-4cf8-85a6-e06e6c0aef80","Title":"string","Description":"string","IsCompleted":true,"CreatedAt":"2025-09-22T22:31:26.2635090Z","$type":"TaskLookupDto"}],"$type":"TaskListVm"}
+2025-09-25 02:38:09.078 +03:00 [INF] Handling LoginUserCommand with data: {"Email":"newUser@mai.ru","Password":"string","$type":"LoginUserCommand"}
+2025-09-25 02:38:09.604 +03:00 [ERR] Incorrect (string) for "user"
+2025-09-25 02:38:18.637 +03:00 [INF] Handling LoginUserCommand with data: {"Email":"newUser@mai.ru","Password":"Monika11","$type":"LoginUserCommand"}
+2025-09-25 02:38:18.823 +03:00 [INF] Handled LoginUserCommand with response: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMGQ4NTAzNC0zNzAyLTQ0YTUtODhkNi0wOGQwMjA2OTdhMzEiLCJlbWFpbCI6Im5ld1VzZXJAbWFpLnJ1IiwiZXhwIjoxNzU4NzYwNjk4LCJpc3MiOiJZb3VySXNzdWVyIiwiYXVkIjoiWW91ckF1ZGllbmNlIn0.MDJyaQMi1OYFbZDlB7yGkI5K5GxTxcYCcNJ56zai3GI
+2025-09-25 02:38:31.061 +03:00 [INF] Handling GetTaskDetailsQuery with data: {"UserId":"10d85034-3702-44a5-88d6-08d020697a31","Id":"39f22bd5-63a8-4f7f-9818-256627175e57","$type":"GetTaskDetailsQuery"}
+2025-09-25 02:38:31.078 +03:00 [INF] Handled GetTaskDetailsQuery with response: {"Id":"39f22bd5-63a8-4f7f-9818-256627175e57","Title":"someTask2","Description":"test","IsCompleted":false,"CreatedAt":"2025-09-22T20:29:20.6976710Z","$type":"TaskDetailsVm"}

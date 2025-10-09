@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Tasks.Application.Tasks.Commands.CreateTask;
 using Tasks.Application.Tasks.Commands.DeleteTask;

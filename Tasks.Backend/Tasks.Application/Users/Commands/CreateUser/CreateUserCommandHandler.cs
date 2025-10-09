@@ -5,24 +5,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tasks.Application.Tasks.Commands.CreateTask;
+using Tasks.Security;
 
 namespace Tasks.Application.Users.Commands.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
     {
         private readonly ITasksDbContext _dbContext;
+        private readonly IJwtTokenService _jwtService;
 
-        public CreateUserCommandHandler(ITasksDbContext dbContext) =>
-            _dbContext = dbContext;
+        public CreateUserCommandHandler(ITasksDbContext dbContext, IJwtTokenService jwtService)
+        {
+            _dbContext = dbContext; _jwtService = jwtService;
+        }
 
         public async Task<Guid> Handle(CreateUserCommand request,
             CancellationToken cancellationToken)
         {
+            var id = Guid.NewGuid();
             var user = new Domain.User
             {
-                Id = Guid.NewGuid(),
+                Id = id,
                 Email = request.Email,
-                PasswordHash = request.Password
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password)
             };
 
             await _dbContext.Users.AddAsync(user, cancellationToken);

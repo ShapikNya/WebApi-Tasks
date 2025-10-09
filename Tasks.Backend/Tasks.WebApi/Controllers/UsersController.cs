@@ -4,6 +4,7 @@ using Tasks.Application.Tasks.Commands.CreateTask;
 using Tasks.Application.Tasks.Commands.DeleteTask;
 using Tasks.Application.Users.Commands.CreateUser;
 using Tasks.Application.Users.Commands.DeleteUser;
+using Tasks.Application.Users.Commands.LogingUsrt;
 using Tasks.WebApi.Models.Users;
 using Tasks.WepApi.Controllers;
 
@@ -62,6 +63,33 @@ namespace Tasks.WebApi.Controllers
             };
             await Mediator.Send(command);
             return NoContent();
+        }
+
+        /// <summary>
+        /// Logs in the user and returns a JWT token
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// POST /users/login
+        /// {
+        ///     "email": "first_user@test.com",
+        ///     "password": "Qwwerty124"
+        /// }
+        /// </remarks>
+        /// <param name="command">LoginUserCommand containing email and password</param>
+        /// <returns>Returns JWT token</returns>
+        /// <response code="200">Success, returns JWT token</response>
+        /// <response code="400">Invalid request</response>
+        /// <response code="401">Unauthorized, invalid credentials</response>
+        [HttpPost("login")]
+        [Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public async Task<ActionResult<string>> Login([FromBody] LoginUserCommand command)
+        {
+            var token = await Mediator.Send(command);
+            return Ok(token);
         }
     }
 }
