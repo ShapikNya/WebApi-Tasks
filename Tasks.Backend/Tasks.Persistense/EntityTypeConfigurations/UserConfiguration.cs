@@ -16,6 +16,7 @@ namespace Tasks.Persistense.EntityTypeConfigurations
             builder.HasIndex(x => x.Id).IsUnique();
             builder.Property(x => x.Email).HasMaxLength(100).IsRequired();
             builder.Property(x => x.PasswordHash).HasMaxLength(255).IsRequired();
+            builder.Property(x => x.Role).HasMaxLength(64).IsRequired();
         }
     }
 }

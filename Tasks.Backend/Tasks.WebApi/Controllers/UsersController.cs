@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Tasks.Application.Tasks.Commands.CreateTask;
 using Tasks.Application.Tasks.Commands.DeleteTask;
@@ -44,7 +45,7 @@ namespace Tasks.WebApi.Controllers
         }
 
         /// <summary>
-        /// Deletes the user by id
+        /// Deletes the user by id. Requires Admin role
         /// </summary>
         /// <remarks>
         /// Sample request:
@@ -54,6 +55,7 @@ namespace Tasks.WebApi.Controllers
         /// <returns>Returns NoContent</returns>
         /// <response code="204">Success</response>
         [HttpDelete("{id}")]
+        [Authorize(Policy = "AdminOnly")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> Delete(Guid id)
         {

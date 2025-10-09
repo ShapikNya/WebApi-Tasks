@@ -50,6 +50,13 @@ builder.Services.AddAuthentication("Bearer")
         };
     });
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy =>
+        policy.RequireRole("Admin"));
+    options.AddPolicy("UserOrAdmin", policy =>
+        policy.RequireRole("User", "Admin"));
+});
 
 builder.Services.AddControllers();
 builder.Services.AddCors(options =>

@@ -27,6 +27,7 @@ namespace Tasks.Application.Users.Commands.CreateUser
             {
                 Id = id,
                 Email = request.Email,
+                Role = "User",
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password)
             };
 

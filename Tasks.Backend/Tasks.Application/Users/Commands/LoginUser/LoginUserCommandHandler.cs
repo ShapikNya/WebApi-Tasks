@@ -34,7 +34,7 @@ namespace Tasks.Application.Users.Commands.LoginUser
             if (!validPassword)
                 throw new InvalidPasswordException(nameof(user), request.Password);
 
-            var token = _jwtService.GenerateToken(user.Id, user.Email);
+            var token = _jwtService.GenerateToken(user.Id, user.Email, user.Role);
             return token;
         }
     }

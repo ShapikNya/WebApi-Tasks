@@ -19,12 +19,13 @@ namespace Tasks.Security
             _config = config;
         }
 
-        public string GenerateToken(Guid userId, string email)
+        public string GenerateToken(Guid userId, string email, string role)
         {
             var claims = new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Sub, userId.ToString()),
-            new Claim(JwtRegisteredClaimNames.Email, email)
+            new Claim(JwtRegisteredClaimNames.Email, email),
+            new Claim(ClaimTypes.Role, role)
         };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
