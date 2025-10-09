@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Tasks.Application;
+using DotNetEnv;
 
 namespace Tasks.Persistense
 {
@@ -15,7 +16,16 @@ namespace Tasks.Persistense
     {
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration["DbConnection"];
+            string connectionString;
+
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
+            {
+                string envPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName, ".env");
+                DotNetEnv.Env.Load(envPath);
+                connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_LOCAL");
+            }    
+            else
+                connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_DOCKER");
 
             services.AddDbContext<TasksDbContext>(options =>
             {
