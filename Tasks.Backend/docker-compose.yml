@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgres:15
+    container_name: tasks_db
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${DB_PORT_HOST}:${DB_PORT_CONTAINER}"
+    volumes:
+      - tasks_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  webapi:
+    build:
+      context: .
+      dockerfile: Tasks.WebApi/Dockerfile
+    container_name: tasks_webapi
+    restart: always
+    ports:
+      - "${WEBAPI_PORT_HOST}:${WEBAPI_PORT_CONTAINER}"
+    environment:
+      ASPNETCORE_URLS: ${ASPNETCORE_URLS}
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT}
+      DbConnection: ${DB_CONNECTION}
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  tasks_db_data:
