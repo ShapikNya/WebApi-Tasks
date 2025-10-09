@@ -12,6 +12,7 @@ namespace Tasks.Persistense
     public class TasksDbContext :  DbContext, ITasksDbContext
     {
         public DbSet<Domain.Task> Tasks { get; set; }
+        public DbSet<Domain.User> Users { get; set; }
 
         public TasksDbContext(DbContextOptions<TasksDbContext> options)
             : base (options) { }
@@ -19,6 +20,7 @@ namespace Tasks.Persistense
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new TaskConfiguration());
+            builder.ApplyConfiguration(new UserConfiguration());
             base.OnModelCreating(builder);
         }
 

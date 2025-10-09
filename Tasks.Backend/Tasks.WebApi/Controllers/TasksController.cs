@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Tasks.Application.Tasks.Commands.CreateTask;
 using Tasks.Application.Tasks.Commands.DeleteTask;
 using Tasks.Application.Tasks.Commands.UpdateNote;
 using Tasks.Application.Tasks.Queries.GetTaskDetails;
 using Tasks.Application.Tasks.Queries.GetTaskList;
-using Tasks.WepApi.Models;
+using Tasks.WebApi.Models.Tasks;
 
 namespace Tasks.WepApi.Controllers
 {
@@ -19,7 +20,7 @@ namespace Tasks.WepApi.Controllers
         public TasksController(IMapper mapper) => _mapper = mapper;
 
         /// <summary>
-        /// Gets the list of tasks
+        /// Gets the list of tasks. Requires Admin role
         /// </summary>
         /// <remarks>
         /// Sample request:
@@ -28,6 +29,7 @@ namespace Tasks.WepApi.Controllers
         /// <returns>Returns TaskListVm</returns>
         /// <response code="200">Success</response>
         [HttpGet]
+        [Authorize(Policy = "AdminOnly")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<TaskListVm>> GetAll()
         {
@@ -40,7 +42,7 @@ namespace Tasks.WepApi.Controllers
         }
 
         /// <summary>
-        /// Gets the task by id
+        /// Gets the task by id. Requires authorized users
         /// </summary>
         /// <remarks>
         /// Sample request:
@@ -50,6 +52,7 @@ namespace Tasks.WepApi.Controllers
         /// <returns>Returns TaskDetailsVm</returns>
         /// <response code="200">Success</response>
         [HttpGet("{id}")]
+        [Authorize(Policy = "UserOrAdmin")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<TaskDetailsVm>> Get(Guid id)
         {
@@ -63,7 +66,7 @@ namespace Tasks.WepApi.Controllers
         }
 
         /// <summary>
-        /// Creates the task
+        /// Creates the task. Requires authorized users
         /// </summary>
         /// <remarks>
         /// Sample request:
@@ -77,6 +80,7 @@ namespace Tasks.WepApi.Controllers
         /// <returns>Returns id (guid)</returns>
         /// <response code="201">Success</response>
         [HttpPost]
+        [Authorize(Policy = "UserOrAdmin")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<ActionResult<Guid>> Create([FromBody] CreateTaskDto createTaskDto)
         {
@@ -86,7 +90,7 @@ namespace Tasks.WepApi.Controllers
             return Ok(taskId);
         }
         /// <summary>
-        /// Updates the task
+        /// Updates the task. Requires authorized users
         /// </summary>
         /// <remarks>
         /// Sample request:
@@ -102,6 +106,7 @@ namespace Tasks.WepApi.Controllers
         /// <returns>Returns NoContent</returns>
         /// <response code="204">Success</response>
         [HttpPut]
+        [Authorize(Policy = "UserOrAdmin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<ActionResult<Guid>> Update([FromBody] UpdateTaskDto updateTaskDto)
         {
@@ -113,7 +118,7 @@ namespace Tasks.WepApi.Controllers
 
 
         /// <summary>
-        /// Deletes the task by id
+        /// Deletes the task by id. Requires authorized users
         /// </summary>
         /// <remarks>
         /// Sample request:
@@ -123,6 +128,7 @@ namespace Tasks.WepApi.Controllers
         /// <returns>Returns NoContent</returns>
         /// <response code="204">Success</response>
         [HttpDelete("{id}")]
+        [Authorize(Policy = "UserOrAdmin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> Delete(Guid id)
         {
